@@ -1,0 +1,12 @@
+service servicemanager /system/bin/servicemanager
+    class core
+    user system
+    group system
+    critical
+    onrestart restart zygote
+    onrestart restart media
+    onrestart restart surfaceflinger
+    onrestart restart drm
+# LGE_BROADCAST_ONESEG && LGE_BROADCAST_TDMB {
+    onrestart restart broadcast
+# LGE_BROADCAST }

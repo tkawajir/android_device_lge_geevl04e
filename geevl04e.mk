@@ -23,6 +23,7 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Init files
 LOCAL_PATH := device/lge/geevl04e
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc \
     $(LOCAL_PATH)/rootdir/fstab_dcm.qcom:root/fstab_dcm.qcom \
     $(LOCAL_PATH)/rootdir/sbin/setup_fs:root/sbin/setup_fs
 
