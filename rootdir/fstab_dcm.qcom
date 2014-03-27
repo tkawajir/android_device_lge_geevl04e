@@ -1,0 +1,5 @@
+# Android fstab file.
+
+# <src>                                                <mnt_point>  <type>  <mnt_flags and options>                                                 <fs_mgr_flags>
+
+/dev/block/platform/msm_sdcc.1/by-name/OneSeg          /OneSeg       ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc                          wait,check

@@ -24,6 +24,18 @@ on init
     mkdir /storage/usbdisk0 0700 root root
     mkdir /factory 0775 system system
     export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk0
+on emmc-fmt
+# felica seclog mmbi 1seg partitoin format
+    exec /sbin/setup_fs \
+        /dev/block/platform/msm_sdcc.1/by-name/OneSeg \
+        no_reboot
+
+on fs-etc
+# 1seg mount
+    mkdir /OneSeg 0771 system system
+    mount_all fstab_dcm.qcom
+    chmod 0771 /OneSeg
+    chown system system /OneSeg
 
 on fs
     mount_all ./fstab.geefhd
@@ -111,3 +123,11 @@ service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usbdisk0 
     class late_start
     disabled
 
+on property:vold.post_fs_data_done=1
+    start postinstaller
+# LGE_BROADCAST_ONESEG {
+service broadcast /system/bin/libbroadcast_server
+    class main
+    user media
+    group system audio media graphics sdcard_rw
+# LGE_BROADCAST_ONESEG }

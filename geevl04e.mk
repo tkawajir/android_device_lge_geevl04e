@@ -20,6 +20,12 @@
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
+# Init files
+LOCAL_PATH := device/lge/geevl04e
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/fstab_dcm.qcom:root/fstab_dcm.qcom \
+    $(LOCAL_PATH)/rootdir/sbin/setup_fs:root/sbin/setup_fs
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 

@@ -43,6 +43,11 @@
 /dev/block/mmcblk0p8      0660   system     system
 /dev/block/mmcblk0p9      0660   system     system
 
+# LGE_BROADCAST_ONESEG {
+# For 1seg/MMBi device driver
+/dev/broadcast_isdbt      0666   system     system
+# LGE_BROADCAST_ONESEG }
+
 # yongmin.jung@lge.com 2012.07.10 change qcks, ks, efsks into system process
 /dev/block/mmcblk0p12     0660   system     system
 /dev/block/mmcblk0p13     0660   system     system
