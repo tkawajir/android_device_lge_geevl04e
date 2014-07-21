@@ -140,6 +140,12 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/fw_bcmdhd.bin
 etc/firmware/fw_bcmdhd_apsta.bin
 etc/firmware/fw_bcmdhd_p2p.bin
+
+#dcm_emoji
+lib/libDecoEmojiJniNative.so
+lib/libemoji_docomo.so
+lib/libemojidata_type2_docomo.so
+
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
