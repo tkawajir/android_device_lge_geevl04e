@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/initlogo.rle:root/initlogo.rle888 \
 	$(LOCAL_PATH)/init.geefhd.rc:root/init.geefhd.rc \
 	$(LOCAL_PATH)/fstab.geefhd:root/fstab.geefhd \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
 	$(LOCAL_PATH)/ueventd.geefhd.rc:root/ueventd.geefhd.rc
 
 PRODUCT_COPY_FILES += \
