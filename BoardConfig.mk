@@ -75,3 +75,6 @@ TW_EXTERNAL_STORAGE_PATH := "/external_SD"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_SD"
 TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+
+BOARD_SEPOLICY_DIRS += \
+        device/lge/geevl04e/sepolicy
