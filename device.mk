@@ -78,6 +78,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.default_network=9 \
 	telephony.lteOnGsmDevice=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	pm.sleep.mode=1
+	persist.sys.language=ja
+	persist.sys.country=JP
+
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
